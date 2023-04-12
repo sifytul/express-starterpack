@@ -6,15 +6,29 @@ Enter the following command one by one!!
 git clone "https://github.com/sifytul/express-starterpack.git" <repo name>
 cd <repo name>
 yarn
-yarn dev
 git remote remove origin
 ```
-## Windows powershell
+
+## Remove .git file from the repository
+
 ```
+// Windows powershell
 Remove-Item -Recurse -Force .git
+
+or
+//inux or Mac
+rm -rf .git/
 ```
 
-## Linux or Mac
+
+## environment setup
+### Add the database uri and other environment variable into the .env file like 
 ```
-rm -rf .git/
+PORT=4000
+MONGO_URI = Enter url here... (mongodb://localhost:27017)
+```
+
+## Then run the server
+```
+yarn dev
 ```
